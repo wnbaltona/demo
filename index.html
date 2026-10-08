@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Serwis Lokali — zgłaszanie i obsługa usterek.">
+    <meta name="theme-color" content="#1d2e3b">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Serwis Lokali">
+
+    <title>TEST — Serwis Lokali · Zgłoszenia usterek</title>
+    <link rel="manifest" href="./manifest.json?v=demo-users1">
+    <link rel="icon" type="image/png" href="./icon-192.png?v=demo-users1">
+    <link rel="apple-touch-icon" href="./icon-192.png?v=demo-users1">
+    <link rel="stylesheet" href="./styles.css?v=demo-users1">
+    <link rel="stylesheet" href="./fonts/manrope.css?v=demo-users1">
+    <link rel="stylesheet" href="./ui-polish.css?v=demo-users1">
+    <link rel="stylesheet" href="./ui-layout.css?v=demo-users1">
+    <link rel="stylesheet" href="./ui-finish.css?v=demo-users1">
+    <link rel="stylesheet" href="./ui-schedule.css?v=demo-users1">
+    <link rel="stylesheet" href="./ui-responsive.css?v=demo-users1">
+    <link rel="stylesheet" href="./ui-login.css?v=demo-users1">
+    <link rel="stylesheet" href="./ui-theme.css?v=demo-users1">
+    <link rel="stylesheet" href="./mobile-polish.css?v=demo-users1">
+    <link rel="stylesheet" href="./dashboard-polish.css?v=demo-users1">
+    <link rel="stylesheet" href="./account-polish.css?v=demo-users1">
+    <link rel="stylesheet" href="./ticket-list.css?v=demo-users1">
+    <link rel="stylesheet" href="./admin-compact.css?v=demo-users1">
+    <link rel="stylesheet" href="./ticket-detail.css?v=demo-users1">
+    <link rel="stylesheet" href="./accessibility.css?v=demo-users1">
+    <link rel="stylesheet" href="./filter-layout.css?v=demo-users1">
+    <link rel="stylesheet" href="./onprem-login.css?v=demo-users1">
+    <link rel="stylesheet" href="./priority-confirmation.css?v=demo-users1">
+  <link rel="stylesheet" href="./recent-alignment.css?v=demo1">
+</head>
+
+  <body>
+    <a class="skip-link" href="#content">Przejdź do treści</a>
+    <aside class="sidebar">
+      <div class="brand">
+        <span class="brand-mark" aria-hidden="true">
+          <img src="./icon-192.png?v=demo-users1" width="32" height="32" alt="">
+        </span>
+        <div>Serwis Lokali<small>Zgłoszenia usterek</small></div>
+      </div>
+      <nav id="navigation" aria-label="Nawigacja główna"></nav>
+      <button class="sidebar-toggle" type="button" data-action="sidebar-toggle" aria-label="Zwiń menu" aria-controls="navigation" aria-expanded="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M14 5l-7 7 7 7M20 5v14"/></svg><span>Zwiń menu</span></button>
+    </aside>
+
+    <div class="main-wrap">
+      <header class="topbar">
+        <div class="profile">
+          <div class="role-switch">
+            <label for="profile-select">Twoje konto</label>
+            <select id="profile-select" aria-label="Zalogowane konto" disabled></select>
+            <span id="account-summary" class="account-summary" hidden></span>
+          </div>
+          <button
+            id="notification-bell"
+            class="notification-bell"
+            type="button"
+            data-action="notifications"
+            aria-label="Powiadomienia"
+            aria-haspopup="dialog"
+            aria-controls="notifications-dialog"
+          >
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9M9 21h6M12 2V1"/>
+            </svg>
+            <span class="notification-bell-label">Powiadomienia</span>
+            <span class="notification-count" id="notification-count" hidden>0</span>
+          </button>
+          <button id="admin-account-button" class="btn secondary small" type="button" data-action="open-account">Moje konto</button>
+          <div class="profile-current">
+            <strong id="profile-name"></strong>
+            <small id="profile-role"></small>
+          </div>
+          <button class="btn secondary small logout-button" type="button" data-action="logout">
+            Wyloguj
+          </button>
+        </div>
+      </header>
+
+      <div class="sync-notice" id="sync-notice" hidden>
+        <span>Dostępne są nowsze dane z drugiej karty. Twój formularz nie został zmieniony.</span>
+        <button type="button" data-action="apply-pending">Wczytaj nowsze dane</button>
+      </div>
+      <main class="content" id="content" tabindex="-1">
+        <div class="loading" role="status">Łączenie z serwerem firmy…</div>
+      </main>
+    </div>
+
+    <dialog id="install-dialog" class="push-welcome-dialog" aria-labelledby="install-title"></dialog>
+    <dialog id="push-welcome-dialog" class="push-welcome-dialog" aria-labelledby="push-welcome-title"></dialog>
+    <dialog id="account-dialog" class="account-dialog" aria-labelledby="account-title"></dialog>
+    <dialog id="detail-dialog" aria-labelledby="dialog-title"></dialog>
+    <dialog id="quick-close-dialog" class="quick-close-dialog" aria-labelledby="quick-close-title"></dialog>
+    <dialog id="notifications-dialog" class="notifications-dialog" aria-labelledby="notifications-title"></dialog>
+    <dialog id="attachment-preview-dialog" class="attachment-preview-dialog" aria-labelledby="attachment-preview-title"></dialog>
+    <div class="toast-container" id="toasts" aria-live="polite"></div>
+
+    <noscript><div class="fatal">Włącz JavaScript, aby korzystać z aplikacji.</div></noscript>
+    <script src="./locations.js?v=demo-users1"></script>
+    <script src="./app-config.js?v=demo-users1"></script>
+    <script src="./model.js?v=demo-users1"></script>
+    <script src="./install.js?v=demo-users1"></script>
+    <script src="./corporate-backend.js?v=demo-users1"></script>
+    <script src="./integration.js?v=demo-users1"></script>
+    <script src="./app-core.js?v=demo-users1"></script>
+    <script src="./views/shared.js?v=demo-users1"></script>
+    <script src="./views/home.js?v=demo-users1"></script>
+    <script src="./views/new-ticket.js?v=demo-users1"></script>
+    <script src="./views/tickets.js?v=demo-users1"></script>
+    <script src="./views/schedule.js?v=demo-users1"></script>
+    <script src="./views/dashboard.js?v=demo-users1"></script>
+    <script src="./views/admin.js?v=demo-users1"></script>
+    <script src="./views/ticket-detail.js?v=demo-users1"></script>
+    <script src="./toast-layer.js?v=demo-users1"></script>
+    <script src="./app-actions.js?v=demo-users1"></script>
+    <script src="./app-events.js?v=demo-users1"></script>
+    <script src="./account.js?v=demo-users1"></script>
+    <script src="./app-data.js?v=demo-users1"></script>
+    <script src="./bootstrap.js?v=demo-users1"></script>
+  </body>
+</html>

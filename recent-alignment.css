@@ -1,0 +1,21 @@
+
+/* Headings and content share the same column alignment. */
+.recent-panel .tickets-table td[data-label="Usterka"],
+.recent-panel .tickets-table td[data-label="Status"] { text-align:center !important; }
+.recent-panel .tickets-table td[data-label="Usterka"]::before,
+.recent-panel .tickets-table td[data-label="Status"]::before,
+.recent-panel .tickets-table td[data-label="Usterka"] .cell-main { text-align:center !important; width:100%; margin-inline:0 !important; }
+.recent-panel .tickets-table td { min-width:0; overflow-wrap:anywhere; }
+.recent-panel .tickets-table .ticket-actions { display:flex; justify-content:flex-end; gap:8px; flex-wrap:wrap; }
+.recent-panel .tickets-table .pill { white-space:nowrap; max-width:100%; box-sizing:border-box; font-size:12px; }
+@media(min-width:1001px) {
+ @container(min-width:1000px) {
+  .recent-panel .tickets-table tbody tr { align-items:start !important; grid-template-columns:minmax(85px,.8fr) minmax(110px,1.3fr) minmax(145px,1.5fr) minmax(85px,.75fr) minmax(170px,1.2fr) minmax(100px,.85fr) minmax(140px,1fr) !important; gap:12px !important; }
+  .recent-panel .tickets-table td { align-self:start !important; }
+  .recent-panel .tickets-table td::before { display:block; margin:0 0 10px !important; line-height:16px; min-height:16px; }
+  .recent-panel .tickets-table td[data-label="Działanie"] { padding-top:26px !important; }
+  .recent-panel .tickets-table td[data-label="Działanie"]::before { display:none !important; }
+ }
+}
+
+@media(min-width:1001px){@container(max-width:999px){.recent-panel .tickets-table tbody tr{grid-template-columns:repeat(2,minmax(0,1fr)) !important;gap:16px !important;}.recent-panel .tickets-table td[data-label]{grid-area:auto !important;}.recent-panel .tickets-table td[data-label="Działanie"]{grid-column:1/-1 !important;}}}

@@ -1,0 +1,7 @@
+
+.priority-control { margin-bottom: 16px; }
+.priority-control .field { margin: 16px 0; }
+.priority-confirmation-info { margin: 12px 0 0; color: var(--muted, #65738a); font-size: 13px; line-height: 1.5; overflow-wrap: anywhere; }
+.priority-management-fields { border: 0; padding: 0; margin: 0; min-width: 0; }
+.priority-management-fields:disabled { opacity: .6; }
+.priority-pending { font-size: 11px; line-height: 1.4; white-space: nowrap; }

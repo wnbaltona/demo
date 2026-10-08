@@ -1,0 +1,5 @@
+body.auth-screen #content{display:grid;place-items:center;min-height:100dvh;padding:24px 16px;box-sizing:border-box;background:#f4f5f7}
+.onprem-login{width:min(420px,100%);padding:28px;box-sizing:border-box;border:1px solid #dce1e8;border-radius:10px;background:#fff}
+.onprem-brand{display:flex;align-items:center;gap:12px;margin-bottom:28px;font-weight:600}
+.onprem-login h1{margin:0 0 12px;font-size:24px}.onprem-login p{margin:0 0 20px;line-height:1.6;color:#52627a}
+.onprem-login form{margin:0}.onprem-login .btn{width:100%;min-height:44px;margin:0}.onprem-login .install-button{margin-top:12px}
