@@ -1,0 +1,41 @@
+/* Keep nested management controls spaced independently of the outer form. */
+#detail-dialog #manage-form .priority-management-fields {
+  display: grid;
+  gap: 18px;
+  width: 100%;
+  min-width: 0;
+}
+#detail-dialog #manage-form .priority-management-fields > .field,
+#detail-dialog .priority-control > .field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+  margin: 0;
+}
+#detail-dialog #manage-form .field > label,
+#detail-dialog .priority-control .field > label { margin: 0; line-height: 1.5; }
+#detail-dialog #manage-form .field > input,
+#detail-dialog #manage-form .field > select { width: 100%; box-sizing: border-box; margin: 0; }
+#detail-dialog #manage-form .due-suggestion { margin: 4px 0 0; gap: 12px; }
+#detail-dialog #manage-form .priority-management-fields > .btn { margin: 0; width: 100%; min-height: 44px; white-space: normal; }
+#detail-dialog #manage-form .priority-management-fields > .btn + .btn { margin-top: -6px; }
+#detail-dialog .priority-control { display: flex; flex-direction: column; gap: 16px; }
+#detail-dialog .priority-control > h3,
+#detail-dialog .priority-control > .hint,
+#detail-dialog .priority-control > .priority-confirmation-info { margin: 0; }
+#detail-dialog .priority-control > .btn { align-self: flex-start; margin: 0; min-height: 44px; }
+#detail-dialog .detail-grid > aside { min-width: 0; }
+#detail-dialog .comment-form { margin-top: 24px; row-gap: 14px; }
+#detail-dialog .comment-form textarea { margin: 0; box-sizing: border-box; width: 100%; }
+#detail-dialog .comment-attach { grid-column: 1 / -1; grid-row: 2; display: flex; flex-wrap: wrap; gap: 10px 12px; align-items: center; margin: 0; }
+#detail-dialog .comment-status-choice { grid-column: 1 / -1; grid-row: 3; margin: 0; }
+#detail-dialog .comment-top { gap: 8px 16px; flex-wrap: wrap; }
+#detail-dialog .file-row { min-width: 0; gap: 12px; }
+#detail-dialog .file-name { min-width: 0; overflow-wrap: anywhere; }
+@media (max-width: 600px) {
+  #detail-dialog .priority-control > .btn { width: 100%; }
+  #detail-dialog .file-row { flex-wrap: wrap; }
+  #detail-dialog .attachment-actions { width: 100%; display: flex; flex-wrap: wrap; gap: 8px; }
+  #detail-dialog .comment-attach > span { flex-basis: 100%; }
+}
